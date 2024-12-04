@@ -1,0 +1,22 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  
+    .quick-links {
+      margin: 20px 0;
+  
+      :is(button) {
+        margin: 10px;
+      }
+    }
+  
+    .promotions {
+      margin-top: 40px;
+  
+      .promo-card {
+        margin: 10px auto;
+        max-width: 400px;
+      }
+    }
+  }
+  

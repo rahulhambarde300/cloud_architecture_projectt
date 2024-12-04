@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="header">
+    <!-- <h1 class="title">Welcome {{userName}}</h1> -->
+  </div>
+  <div class="content">
+
+    <div *ngIf="needsLogin" class="alert alert-warning">
+      You have been redirected to this page because you don't have the necessary
+      rights for the reqeusted action. Login with a respective user account!
+    </div>
+
+    <div class="home-container">
+      <h1>Welcome, {{ username != "" ? username : 'Guest' }}!</h1>
+      <p>Plan your next adventure with Flight42.</p>
+    
+      <div class="quick-links" *ngIf="isAuthenticated">
+        <button class="btn btn-primary" (click)="goToFlights()">Search Flights</button>
+        <button class="btn btn-secondary" (click)="goToHotels()">Search Hotels</button>
+      </div>
+      <div class="quick-links" *ngIf="!isAuthenticated">
+        <p>Sign in or register for full access.</p>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+
